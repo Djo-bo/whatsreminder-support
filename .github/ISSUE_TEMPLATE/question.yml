@@ -1,0 +1,36 @@
+name: Poser une question
+description: Quelque chose n'est pas clair ou tu ne sais pas comment l'utiliser.
+title: "[Question] "
+labels:
+  - question
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Que cherches-tu à comprendre ou à accomplir ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte
+      description: Où étais-tu dans l'extension et qu'essayais-tu de faire ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: Ce que tu as déjà essayé
+      description: Facultatif — indique les actions ou explications déjà consultées.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Vie privée
+      options:
+        - label: Mon retour ne contient aucun nom, numéro, photo ou contenu de message privé.
+          required: true
+
