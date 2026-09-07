@@ -1,0 +1,96 @@
+name: Signaler un bug
+description: Quelque chose ne fonctionne pas comme prévu dans WhatsReminder.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre quelques minutes pour décrire le problème. Plus le scénario est précis, plus le correctif sera rapide.
+
+        **Vie privée :** masque les noms, photos, numéros de téléphone et contenus de messages dans les captures ou journaux partagés.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version de WhatsReminder
+      description: Visible sur la fiche de l'extension dans `chrome://extensions` ou `brave://extensions`.
+      placeholder: "Ex. 1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Navigateur
+      options:
+        - Google Chrome
+        - Brave
+        - Microsoft Edge
+        - Autre navigateur Chromium
+    validations:
+      required: true
+
+  - type: input
+    id: browser_version
+    attributes:
+      label: Version du navigateur
+      placeholder: "Ex. 128.0.6613.120"
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      description: Décris ce que tu fais depuis le début jusqu'à l'apparition du problème.
+      placeholder: |
+        1. J'ouvre WhatsApp Web…
+        2. Je clique sur…
+        3. Le problème apparaît lorsque…
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: Résultat observé
+      description: Que s'est-il réellement passé ? Ajoute une capture anonymisée si elle aide à comprendre.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Résultat attendu
+      description: Que pensais-tu voir ou pouvoir faire à la place ?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Fréquence
+      options:
+        - À chaque fois
+        - Souvent
+        - Une seule fois
+        - Je ne sais pas
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte supplémentaire
+      description: Tout détail utile, sans donnée personnelle WhatsApp.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Vérification
+      options:
+        - label: J'ai retiré les noms, numéros, photos et contenus de messages privés.
+          required: true
+        - label: J'ai vérifié qu'un ticket identique n'existe pas déjà.
+          required: true
+
