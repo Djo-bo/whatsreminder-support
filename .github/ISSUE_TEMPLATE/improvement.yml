@@ -1,0 +1,54 @@
+name: Proposer une amélioration
+description: Une idée pour rendre WhatsReminder plus clair, utile ou agréable.
+title: "[Amélioration] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci pour l'idée. Décris surtout le besoin rencontré : cela aide à trouver la meilleure solution, même si elle diffère de la première idée.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Besoin ou difficulté
+      description: Dans quelle situation WhatsReminder te limite ou te demande trop d'effort ?
+      placeholder: "Quand je…, j'aimerais pouvoir… parce que…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Amélioration souhaitée
+      description: Comment imagines-tu que cela pourrait fonctionner ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Solution actuelle ou alternatives
+      description: Comment fais-tu aujourd'hui pour contourner ce besoin ?
+
+  - type: dropdown
+    id: importance
+    attributes:
+      label: Importance pour toi
+      options:
+        - Bloquant pour mon usage
+        - Important
+        - Confort appréciable
+        - Simple idée
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Vie privée
+      options:
+        - label: Mon retour ne contient aucun nom, numéro, photo ou contenu de message privé.
+          required: true
+
